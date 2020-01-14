@@ -1,0 +1,30 @@
+﻿@model List<Roles>;
+@{ 
+    var roles = Model;
+}
+
+<div class="text-center">
+    <table>
+        <tr>
+            <th>Roll:</th>
+            <th>STY</th>
+            <th>FYS</th>
+            <th>SMI</th>
+            <th>INT</th>
+            <th>PSY</th>
+            <th>KAR</th>
+        </tr>
+        @foreach (Roles role in roles)
+        {
+            <tr>
+                <td>@role.RoleName</td>
+                <td>@role.Sty</td>
+                <td>@role.Fys</td>
+                <td>@role.Smi</td>
+                <td>@role.Intl</td>
+                <td>@role.Psy</td>
+                <td>@role.Kar</td>
+            </tr>
+        }
+    </table>
+</div>
